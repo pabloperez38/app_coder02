@@ -1,4 +1,5 @@
 import {
+  Alert,
   Button,
   Keyboard,
   Text,
@@ -14,8 +15,27 @@ import { styles } from "./styles";
 const Principal = () => {
   const [number, setNumber] = useState("");
 
+  const [selectedNumber, setSelectedNumber] = useState(null);
+  const [confirmed, setConfirmed] = useState(false);
+
   const onHandleChange = (value) => {
     setNumber(value.replace(/[^0-9]/g, ""));
+  };
+  const onHandleReset = () => {
+    setNumber("");
+    setConfirmed(false);
+  };
+  const onHandleConfirm = () => {
+    const chosenNumber = parseInt(number, 10);
+    if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
+      Alert.alert("Número inválido", "Debe escribir un número entre 1 y 99", [
+        { text: "OK", style: "destructive", onPress: onHandleReset },
+      ]);
+    } else {
+      setConfirmed(true);
+      setSelectedNumber(chosenNumber);
+      setNumber("");
+    }
   };
   return (
     <TouchableWithoutFeedback
@@ -38,12 +58,12 @@ const Principal = () => {
           <View style={styles.buttonContainer}>
             <Button
               title="Resetear"
-              onPress={() => null}
+              onPress={onHandleReset}
               color={colors.secundario}
             />
             <Button
               title="Enviar"
-              onPress={() => null}
+              onPress={onHandleConfirm}
               color={colors.terciario}
             />
           </View>
