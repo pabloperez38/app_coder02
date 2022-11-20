@@ -6,7 +6,7 @@ import {
   TouchableWithoutFeedback,
   View,
 } from "react-native";
-import { Card, Input } from "../../componentes";
+import { Card, Input, NumberContainer } from "../../componentes";
 import React, { useState } from "react";
 
 import colors from "../../constantes/colors";
@@ -37,6 +37,20 @@ const Principal = () => {
       setNumber("");
     }
   };
+  const onHandleStartGame = () => {};
+
+  const confirmedOutput = () =>
+    confirmed ? (
+      <Card style={styles.confirmedContainer}>
+        <Text style={styles.confirmedTitle}>El número ingresado es: </Text>
+        <NumberContainer number={selectedNumber} />
+        <Button
+          title="Comenzar"
+          onPress={onHandleStartGame}
+          color={colors.primario}
+        />
+      </Card>
+    ) : null;
   return (
     <TouchableWithoutFeedback
       onPress={() => {
@@ -68,6 +82,7 @@ const Principal = () => {
             />
           </View>
         </Card>
+        {confirmedOutput()}
       </View>
     </TouchableWithoutFeedback>
   );

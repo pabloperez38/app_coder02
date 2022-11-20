@@ -32,4 +32,12 @@ export const styles = StyleSheet.create({
     width: "60%",
     justifyContent: "space-around",
   },
+  confirmedContainer: {
+    width: "66%",
+    height: 200,
+    justifyContent: "space-around",
+    alignItems: "center",
+    marginVertical: 30,
+  },
+  confirmedTitle: { fontSize: 18 },
 });
