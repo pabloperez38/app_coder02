@@ -8,5 +8,9 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  title: { fontSize: 22, color: colors.blanco, fontWeight: "bold" },
+  title: {
+    fontFamily: "DMSans-Bold",
+    fontSize: 30,
+    color: colors.blanco,
+  },
 });

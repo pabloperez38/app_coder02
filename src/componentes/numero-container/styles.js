@@ -11,5 +11,5 @@ export const styles = StyleSheet.create({
     width: 50,
     height: 50,
   },
-  number: { fontSize: 26, fontWeight: "bold", color: colors.blanco },
+  number: { fontFamily: "DMSans-Bold", fontSize: 26, color: colors.blanco },
 });

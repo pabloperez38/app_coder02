@@ -8,19 +8,21 @@ export const styles = StyleSheet.create({
     marginVertical: 15,
   },
   title: {
+    fontFamily: "DMSans-Regular",
     fontSize: 18,
     color: colors.texto,
     textAlign: "center",
     paddingVertical: 20,
   },
   inputContainer: {
-    width: "66%",
+    width: "70%",
     paddingVertical: 40,
     justifyContent: "center",
     alignItems: "center",
   },
   input: {
-    minWidth: 70,
+    fontFamily: "DMSans-Regular",
+    width: "70%",
     fontSize: 22,
     marginBottom: 10,
     justifyContent: "center",
@@ -39,5 +41,5 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginVertical: 30,
   },
-  confirmedTitle: { fontSize: 18 },
+  confirmedTitle: { fontFamily: "DMSans-Regular", fontSize: 18 },
 });
