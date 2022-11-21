@@ -12,7 +12,7 @@ import React, { useState } from "react";
 import colors from "../../constantes/colors";
 import { styles } from "./styles";
 
-const Principal = () => {
+const Principal = ({ onStartGame }) => {
   const [number, setNumber] = useState("");
 
   const [selectedNumber, setSelectedNumber] = useState(null);
@@ -37,7 +37,6 @@ const Principal = () => {
       setNumber("");
     }
   };
-  const onHandleStartGame = () => {};
 
   const confirmedOutput = () =>
     confirmed ? (
@@ -46,7 +45,7 @@ const Principal = () => {
         <NumberContainer number={selectedNumber} />
         <Button
           title="Comenzar"
-          onPress={onHandleStartGame}
+          onPress={() => onStartGame(selectedNumber)}
           color={colors.primario}
         />
       </Card>

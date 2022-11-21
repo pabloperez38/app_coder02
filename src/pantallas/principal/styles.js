@@ -14,22 +14,22 @@ export const styles = StyleSheet.create({
     paddingVertical: 20,
   },
   inputContainer: {
-    paddingVertical: 20,
+    width: "66%",
+    paddingVertical: 40,
     justifyContent: "center",
     alignItems: "center",
   },
   input: {
-    width: "100%",
     minWidth: 70,
     fontSize: 22,
-    paddingVertical: 10,
     marginBottom: 10,
+    justifyContent: "center",
     textAlign: "center",
     alignItems: "center",
   },
   buttonContainer: {
     flexDirection: "row",
-    width: "60%",
+    width: "70%",
     justifyContent: "space-around",
   },
   confirmedContainer: {
